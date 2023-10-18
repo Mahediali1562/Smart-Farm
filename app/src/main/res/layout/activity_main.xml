@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/DARK_GREEN"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/montserrat"
+            android:text="SMART FARM"
+            android:textColor="@color/GLARE_WHITE"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/FRAME"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/GLARE_WHITE"
+        app:layout_constraintBottom_toTopOf="@+id/BOTTOM_NAV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/DARK_GREEN"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/upload"
+        android:textColor="@color/GLARE_WHITE"
+        app:elevation="2dp"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/GLARE_WHITE"
+        app:layout_constraintBottom_toBottomOf="@+id/FRAME"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_alarm_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/app_name"
+        app:elevation="2dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:srcCompat="@drawable/ic_image"
+        app:tint="@color/DARK_GREEN" />
+    <!--Action name text for the add alarm button-->
+    <TextView
+        android:id="@+id/add_alarm_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg"
+        android:elevation="2dp"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="2dp"
+        android:text="Image"
+        android:textColor="@color/DARK_GREEN"
+        app:layout_constraintBottom_toBottomOf="@+id/add_alarm_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_alarm_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_alarm_fab" />
+    <!--Floating action button for add person-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_person_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/app_name"
+        android:elevation="2dp"
+        app:elevation="2dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_alarm_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_alarm_fab"
+        app:layout_constraintStart_toStartOf="@+id/add_alarm_fab"
+        app:srcCompat="@drawable/ic_video"
+        app:tint="@color/DARK_GREEN" />
+    <!--Action name text for the add person button-->
+    <TextView
+        android:id="@+id/add_person_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg"
+        android:elevation="2dp"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="2dp"
+        android:text="Video"
+        android:textColor="@color/DARK_GREEN"
+        app:layout_constraintBottom_toBottomOf="@+id/add_person_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_person_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_person_fab" />
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/BOTTOM_NAV"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/TRANSPARENT_GREEN"
+            app:bt_active="true"
+            app:bt_colorActive="@color/DARK_GREEN"
+            app:bt_colorInactive="@color/MID_GRAY"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_title="Home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/TRANSPARENT_GREEN"
+            app:bt_active="false"
+            app:bt_colorActive="@color/DARK_GREEN"
+            app:bt_colorInactive="@color/MID_GRAY"
+            app:bt_icon="@drawable/ic_search"
+            app:bt_title="Search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/account"
+            app:layout_constraintStart_toEndOf="@+id/home"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/TRANSPARENT_GREEN"
+            app:bt_active="false"
+            app:bt_colorActive="@color/DARK_GREEN"
+            app:bt_colorInactive="@color/MID_GRAY"
+            app:bt_icon="@drawable/ic_profile"
+            app:bt_title="Account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
